@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Currency Exchange</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function()
+		{
+			fetch('https://api.apilayer.com/exchangerates_data/live?base=USD&symbols=EUR,GBP')
+			.then(response => response.json())
+			.then(data => {
+				const rate = data.rates.EUR;
+				document.querySelector('body').innerHTML = '1 USD is equal to ${rate.toFixed (3)} EUR. ';
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="currency" placeholder="Currency">
+		<input type="submit" value="Convert">
+		
+	</form>
+	<div id="result">
+			
+		</div>
+</body>
+</html>

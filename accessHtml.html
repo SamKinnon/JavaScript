@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Hello JavaScript
+        </title>
+        <script>
+            // document.querySelector is going to scann all html document and gives ability to select an element in document if are more elements it is going to select first one
+            function count()
+                {
+                    const heading =document.querySelector('h1'); 
+                    if (heading.innerHTML==='Study JavaScript') {
+                        heading.innerHTML='You are Good in it, keep up Brother';
+
+                    }
+                    else{
+                        heading.innerHTML='Study JavaScript';
+                    }
+            
+                }
+            
+        </script>
+    </head>
+    <body>
+        <h1>
+            Study JavaScript
+        </h1>
+        <button onclick="count()" id="button1">
+            Count
+        </button>
+    </body>
+</html>
